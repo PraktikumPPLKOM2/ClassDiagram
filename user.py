@@ -8,6 +8,15 @@ class user:
         self.email = email
         self.alamat = alamat
 
+    def getUserData(self):
+        print("""
+        Username = %s
+        Name     = %s
+        No Telp  = %s
+        Email    = %s
+        Alamat   = %s
+        """)
+
     def getUname(self):
         return self.uname
 
