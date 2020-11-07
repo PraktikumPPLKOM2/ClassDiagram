@@ -1,4 +1,4 @@
-import user.py
+from user import user
 
 class murid:
 
