@@ -4,8 +4,8 @@ from ortu import ortu
 from guru import guru
 
 class loginsession():
-
-    usercollection={}
+    
+    _usercollection={}
     
     def __init__(self):
         self._nama = ""
@@ -32,9 +32,9 @@ class loginsession():
             else:
                 print("Email tidak sesuai ketentuan!")
         
-        usercollection[self._uname]=self._password
+        _usercollection[self._uname]=[self._password,self._email]
         
-        xxx = user(self._uname,self._password,self._nama,self._notelp,self._email,self._alamat)
+       # xxx = user(self._uname,self._password,self._nama,self._notelp,self._email,self._alamat)
         
         print ("""
         Siapakah anda?
@@ -46,11 +46,11 @@ class loginsession():
             ans = int(input("Answer: "))
             if ans < 4:
                 if ans==1:
-                    return murid(user)
+                    return _usercollection["Murid"].append(murid(user))
                 elif ans==2:
-                    return guru(user)
+                    return _usercollection["Guru"].append(guru(user))
                 else:
-                    return ortu(user)
+                    return _usercollection["Ortu"].append(ortu(user))
             else:
                 print ("Wrong input! Try again")
         
@@ -59,8 +59,8 @@ class loginsession():
             username = input("username: ")
             password = input("password: ")
             #verification
-            if username in self.usercollection.keys():
-                if self.usercollection[username] == password:
+            if username in self._usercollection.keys():
+                if self._usercollection[username] == password:
                     #LOGIN SUCCESS
                     print("Login Sukses")
                     #return True
@@ -72,5 +72,11 @@ class loginsession():
                     
             else:
                 print("username salah, silahkan coba lagi")
+    
+    #def forgotpassword(self):
+    #    while(True):
+    #        themail = input("Masukkan Email: ")
+    #        if(themail in _usercollection.value())
+            
             
         

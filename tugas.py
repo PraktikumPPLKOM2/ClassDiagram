@@ -46,14 +46,14 @@ class tugas:
 	    % (self.nama,self.desc,self.deadline)
 	    )
 	
-	def setSubmitStatus(self, murid):
+    def setSubmitStatus(self, murid):
 	    self.score[murid.getID()] = 0
 
-	def getSubmitStatus(self, murid):
+    def getSubmitStatus(self, murid):
 	    return murid.getID() in self.score
 
     def setNilai(self, murid, nilai):
-	    if not getSubmitStatus(murid):
+	    if not self.getSubmitStatus(murid):
 	        print (murid.getName(), "belum mengumpulkan tugas!")
 	    self.score[murid.getID()] = nilai
 	    

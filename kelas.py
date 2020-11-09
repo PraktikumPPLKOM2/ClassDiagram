@@ -1,3 +1,5 @@
+from tugas import tugas
+
 totalKelas = 0
 
 class kelas:
@@ -5,6 +7,7 @@ class kelas:
     #normally kelas kan ada orang yg megang min 1.
     #jadi default guru yg ngisi itu adalah pemilik/teacher.
     def __init__(self, nama, guru, enr=None):
+        global totalKelas
         totalKelas += 1
         self.id = totalKelas
         self.nama = nama

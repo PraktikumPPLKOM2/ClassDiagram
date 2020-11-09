@@ -14,7 +14,7 @@ class ortu:
         return self.anak.keys()
 
     def banyakAnak(self):
-        return len(anak.keys())
+        return len(self.anak.keys())
 
     def getUserData(self):
         return self.USER.getUserData()

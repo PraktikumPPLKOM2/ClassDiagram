@@ -3,12 +3,22 @@ import kelas
 
 # MAIN
 
-usercollection = {}
+user = {}
 
-# REGISTRASI 
 newuser = loginsession()
-newuser.registrasi()
 
-usercollection["Guru"] = newuser
-# Guru memberi tugas
+# GURU
+newuser.register()
+user["Guru"] = newuser
+newuser.login()
+
+# MURID
+newuser.register()
+user["Murid"] = newuser
+newuser.login()
+
+# ORTU
+newuser.register()
+user["Ortu"] = newuser
+newuser.login()
 
