@@ -14,6 +14,9 @@ class tugas:
             self.deadline = None
         self.score = {}
 
+    def getName(self):
+        return self.nama
+
     def getSisaWaktu(self):
         curt = datetime.datetime.now
         # tahun

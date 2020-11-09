@@ -1,3 +1,5 @@
+from tugas import tugas
+
 class murid:
 
     def __init__(self, USER):
@@ -21,6 +23,10 @@ class murid:
         return self.USER.getUserData()
 
     def getTugas(self):
+        for ele in self.kelas:
+            for ele2 in ele.tugass:
+                temp = ele2.getName()
+                self.tugas[temp] = ele2
         return self.tugas.keys()
 
     def statusTugas(self, tugas):
