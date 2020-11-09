@@ -1,21 +1,46 @@
-from user import user
-
 class ortu:
 
-    def __init__(self,iD,uname,pw,name,noTelp,email,alamat):
-        self.dataUser = user(uname,pw,name,noTelp,email,alamat)
-        self.iD = iD
-        self.__anak = []
+    def __init__(self,USER):
+        self.USER = USER
+        self.anak={}
 
-    def anak(self,ID):
-        self.__anak.append(ID)
+    def setAnak(self,murid):
+        if murid.getName() in self.anak:
+            print ("Nama anak sudah ada!")
+        else:
+            self.anak[murid.getName()] = murid.getID()
 
     def getAnak(self):
-        return self.__anak
+        return self.anak.keys()
 
     def banyakAnak(self):
-        return len(self.__anak)
+        return len(anak.keys())
 
     def getUserData(self):
-        return self.dataUser.getUserData
+        return self.USER.getUserData()
 
+    def giveAlert(self,text,murid):
+        print ("Alert Set!")
+        murid.getAlert(text)
+
+    def tugasAnak(self,murid):
+        return murid.tugas.keys()
+        
+    def getuname(self):
+        return self.USER.getuname()
+
+    def statusTugasAnak(self,murid):
+        for key in murid.tugas:
+            if murid.tugas[key] == 0:
+                temp = "Belum dikerjakan"
+            else:
+                temp = "Sudah dikerjakan"
+            print ("""
+            Nama      : %s
+            Kelas     : %s
+            Tugas     : %s
+            Status    : %s
+            """%(murid.getName,murid.getKelas,key,temp))
+
+    def nilai(self,tugas):
+        return tugas.getNilai()

@@ -1,25 +1,42 @@
-from user import user
-
 class murid:
+    
+    def __init__(self,USER):
+        self.USER = USER
+        self.tugas={}
+        self.kelas=None
 
-    def __init__(self,iD,kelas,tugas,uname,pw,name,noTelp,email,alamat):
-        self.dataUser = user(uname,pw,name,noTelp,email,alamat)
-        self.iD = iD
-        self.kelas = kelas
-        self.tugas = tugas
+    def getName(self):
+        return self.USER.getName()
 
     def getID(self):
-        return self.iD
+        return self.USER.getID()
 
     def getKelas(self):
         return self.kelas
 
+    def getUserData(self):
+        return self.USER.getUserData()
+
     def getTugas(self):
-        return self.tugas
+        return self.tugas.keys()
 
-    def addTugas(self,newTugas):
-        self.tugas.append(newTugas)
+    def statusTugas(self,tugas):
+        if tugas in self.tugas and self.tugas[tugas]==0:
+            #BELUM DIKERJAKAN
+            return False
+        elif tugas in self.tugas and self.tugas[tugas]==1:
+            #SUDAH DIKERJAKAN
+            return True
+        else:
+            print("Tugas tidak ditemukan! Periksa ulang keyword")
 
-    #def statusTugas(self,status):
-    #    if status == 0:
+    def kumpulTugas(self,tugas):
+        if tugas in self.tugas and self.tugas[tugas]==0:
+            self.tugas[tugas]=1
+        elif tugas in self.tugas and self.tugas[tugas]==1:
+            print ("Tugasnya sudah dikerjakan!")
+        else:
+            print ("Tugas tidak ditemukan! Periksa ulang keyword")
 
+    def getAlert(self,alert):
+        print (alert + "!!!")

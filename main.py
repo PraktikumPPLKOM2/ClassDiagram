@@ -1,7 +1,14 @@
-from murid import murid
-from ortu import ortu
+from loginsession import loginsession
+import kelas
 
-id = 0
+# MAIN
 
-murid1 = murid(id,"IPA","Biologi 1","DoniTan","123Oke","Doni Tan","0899656","doni@yahoo.com","bukittinggi")
-ortu1 = ortu(id,"TanMalaka","123Sip", "Tan Malaka", "0877707", "tanmalaka@yahoo.com", "bukittinggi")
+usercollection = {}
+
+# REGISTRASI 
+newuser = loginsession()
+newuser.registrasi()
+
+usercollection["Guru"] = newuser
+# Guru memberi tugas
+
