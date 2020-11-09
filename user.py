@@ -1,7 +1,8 @@
 ID = 0
+
 class user:
-    
-    def __init__(self,id,uname,pw,name,noTelp,email,alamat):
+
+    def __init__(self,uname,pw,name,noTelp,email,alamat):
         global ID
         ID += 1
         self.id = ID
