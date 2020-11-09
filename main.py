@@ -8,9 +8,9 @@ from ortu import ortu
 """LOGIN SESSION"""
 newuser = loginsession()
 
-Doni = user("doni","1","doni","1","w@","ww")
-Salsa = user("salsa","2","salsa","2","e@","2w")
-Yohan = user("yohan","3","yohan","3","r@","ew")
+Doni = user("doni","1","doni","1","w@gmail.com","jogja")
+Salsa = user("salsa","2","salsa","2","e@yahoo.coom","jakarta")
+Yohan = user("yohan","3","yohan","3","r@hotmail.com","medan")
 
 userDatabase["Guru"].append(guru(Doni))
 userDatabase["Murid"].append(murid(Salsa))
