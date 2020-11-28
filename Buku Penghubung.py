@@ -87,7 +87,7 @@ class main:
         self.description.configure(foreground="#ffffff")
         self.description.configure(highlightbackground="#d9d9d9")
         self.description.configure(highlightcolor="black")
-        self.description.configure(text='''connect with you teachers, parents, 
+        self.description.configure(text='''connect with your teachers, parents, 
 and students more easily!''')
 
         self.register = tk.Button(top)
