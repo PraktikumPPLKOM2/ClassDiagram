@@ -86,7 +86,7 @@ proc vTclWindow.top44 {base} {
         -font {-family {Arcon Rounded-} -size 12 -weight normal -slant italic -underline 0 -overstrike 0} \
         -foreground #ffffff -highlightbackground $vTcl(actual_gui_bg) \
         -highlightcolor black \
-        -text {connect with you teachers, parents, 
+        -text {connect with your teachers, parents, 
 and students more easily!} 
     vTcl:DefineAlias "$top.lab47" "description" vTcl:WidgetProc "main" 1
     button $top.but48 \
